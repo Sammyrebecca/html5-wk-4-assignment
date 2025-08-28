@@ -1,0 +1,124 @@
+/* =============================
+   Global Styles
+   ============================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* =============================
+   Header + Navigation
+   ============================= */
+.header {
+  background: #2a4d69;
+  color: #fff;
+  padding: 20px;
+  display: flex;               /* Flexbox for header layout */
+  flex-direction: column;
+  align-items: center;
+}
+
+.header h1 {
+  margin-bottom: 15px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;             /* Allow wrapping on smaller screens */
+  gap: 15px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+   Hero Section
+   ============================= */
+.hero {
+  background: #e7eff6;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h2 {
+  margin-bottom: 15px;
+  color: #2a4d69;
+}
+
+/* =============================
+   Main Content with CSS Grid
+   ============================= */
+.main-grid {
+  display: grid;               /* Grid layout */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #bfc9d1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =============================
+   Footer
+   ============================= */
+.footer {
+  background: #2a4d69;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* =============================
+   Responsive Breakpoints
+   ============================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 3 */
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .main-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
